@@ -60,7 +60,7 @@ namespace GEICOprojectV1
            //------- //Get ID and display in text Filed, then pass the ID to function store procedure
             string idQuery = @"select id from Movie where Movie_name = '" + cmbMovieR.Text + "';"; 
             SqlCommand cmdExc = new SqlCommand(idQuery, conString);
-            MessageBox.Show("Now, MovieId Send successfuly!");
+            MessageBox.Show("MovieId passed!");
             int id = (int)cmdExc.ExecuteScalar(); //get id from database based on type of selected movie "cmbMovieR.Text"
             //txtMovieID.Text = Convert.ToString(id);//it is simply to display and see the result to confirm id is bring from database or not
             //-------------
